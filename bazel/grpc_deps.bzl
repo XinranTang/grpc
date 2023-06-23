@@ -21,6 +21,11 @@ def grpc_deps():
     """Loads dependencies need to compile and test the grpc library."""
 
     native.bind(
+        name = "absl",
+        actual = "@com_google_absl//absl",
+    )
+  
+    native.bind(
         name = "upb_lib",
         actual = "@upb//:upb",
     )
